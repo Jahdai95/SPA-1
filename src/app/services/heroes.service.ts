@@ -63,6 +63,9 @@ private heroes: Heroe[] = [
     getHeroes(): Heroe[] { // despues del parentesis es una manera de decir que esa función retorna o responde un array
         return this.heroes;
     }
+    getHeroe( idHeroe: number) {
+      return this.heroes[idHeroe];
+    }
 
 }
 

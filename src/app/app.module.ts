@@ -12,6 +12,7 @@ import {NavbarComponent} from './componets/navbar/navbar.component';
 import {HomeComponent} from './componets/home/home.component';
 import { HeroesComponent } from './componets/heroes/heroes.component';
 import { AboutComponent } from './componets/about/about.component';
+import { HeroeViewComponent } from './componets/heroe-view/heroe-view.component';
 
 // import { from } from 'rxjs';
 
@@ -22,7 +23,8 @@ import { AboutComponent } from './componets/about/about.component';
     NavbarComponent,
     HomeComponent,
     HeroesComponent,
-    AboutComponent
+    AboutComponent,
+    HeroeViewComponent
   ],
   imports: [
     BrowserModule,
