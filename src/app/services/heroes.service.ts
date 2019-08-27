@@ -55,17 +55,31 @@ private heroes: Heroe[] = [
         }
 ];
 
-    constructor(){
+    constructor() {
         console.log('Servicio listo para usar = ) ');
     }
     // funcion para acceder a los heroes, se debe hacer está función porque está declarado como privado
 
     getHeroes(): Heroe[] { // despues del parentesis es una manera de decir que esa función retorna o responde un array
-        return this.heroes;
+      return this.heroes;
     }
     getHeroe( idHeroe: number) {
       return this.heroes[idHeroe];
     }
+    buscarHeroe(termino: string): Heroe[] {
+
+      const heroeArray: Heroe[] = [];
+      termino = termino.toLocaleLowerCase();
+        for (let i = 0; i < this.heroes.length; i++) {
+          const heroe = this.heroes[i];
+          const nombre = heroe.nombre.toLocaleLowerCase();
+          if (nombre.indexOf(termino) >= 0) {
+            heroe.id = i;
+            heroeArray.push(heroe);
+        }
+      }
+      return heroeArray;
+}
 
 }
 
@@ -76,4 +90,5 @@ export interface Heroe {
     img: string;
     aparicion: string;
     casa: string;
+    id?: number;
 }

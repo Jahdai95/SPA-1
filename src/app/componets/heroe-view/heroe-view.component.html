@@ -1,11 +1,11 @@
 <div class="container">
-    <h1>{{heroe.nombre}}. <small>{{heroe.aparicion}}</small></h1>
+    <h1>{{ heroe.nombre | uppercase }}. <small>{{ heroe.aparicion | date: 'y' }}</small></h1>
     <hr>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-4 col-sm-12">
             <img [src]="heroe.img" alt="">
         </div>
-        <div class="col-md-8">
+        <div class="col-lg-8 col-md-8 col-sm-12">
             <h3>{{heroe.nombre}}</h3>
             <br>
             <hr>

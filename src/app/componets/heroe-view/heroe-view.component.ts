@@ -19,13 +19,9 @@ export class HeroeViewComponent {
     dc: 'DC'
   };
 
-  constructor(private activateRoute: ActivatedRoute,
-              private _heroesService: HeroesService
-            ) {
-    this.activateRoute.params.subscribe( params => {
-      // console.log(params);
+  constructor(private _activateRoute: ActivatedRoute, private _heroesService: HeroesService) {
+    this._activateRoute.params.subscribe( params => {
       this.heroe = this._heroesService.getHeroe(params['id']);
-      console.log(this.heroe);
     });
 
    }

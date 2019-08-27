@@ -13,8 +13,7 @@ import {HomeComponent} from './componets/home/home.component';
 import { HeroesComponent } from './componets/heroes/heroes.component';
 import { AboutComponent } from './componets/about/about.component';
 import { HeroeViewComponent } from './componets/heroe-view/heroe-view.component';
-
-// import { from } from 'rxjs';
+import { BusquedaViewComponent } from './componets/busqueda-view/busqueda-view.component';
 
 
 @NgModule({
@@ -24,7 +23,8 @@ import { HeroeViewComponent } from './componets/heroe-view/heroe-view.component'
     HomeComponent,
     HeroesComponent,
     AboutComponent,
-    HeroeViewComponent
+    HeroeViewComponent,
+    BusquedaViewComponent
   ],
   imports: [
     BrowserModule,
